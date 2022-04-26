@@ -38,7 +38,7 @@ mongoose
     console.log(err.message);
   });
 
-app.set('PORT', process.env.port || 4000);
+app.set('PORT', process.env.PORT || 3000);
 
 app.use('/api/secret', SecretRoutes);
 app.use('/api/short-url', ShortUrlRoutes);
