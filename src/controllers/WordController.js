@@ -6,21 +6,16 @@ const res = require('express/lib/response');
 module.exports.create = async (objWord) => {
   try {
     console.log(objWord);
-    const res = await WordModel.generate(objWord);
+    const res = await WordModel.create(objWord);
     return res;
   } catch (error) {
     return error;
   }
 };
 
-module.exports.buscar = async (secretLink) => {
+module.exports.buscar = async () => {
   try {
-    const query = { link: secretLink };
-
-    const resp = await SecretModel.findOne(query);
-    if (!resp) return { message: 'registro no existe' };
-    if (resp.views > 0)
-      return { message: 'este secreto ya sido visto anteriormente' };
+    const resp = await WordModel.find();
     return resp;
   } catch (error) {
     return error;
