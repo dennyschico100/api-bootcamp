@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 const SecretRoutes = require('./routes/secret');
 const ShortUrlRoutes = require('./routes/ShortUrl');
-
+const WordRoutes = require('./routes/Word');
 const morgan = require('morgan');
 
 const corsOptions = {
@@ -42,6 +42,7 @@ app.set('PORT', process.env.PORT || 3000);
 
 app.use('/api/secret', SecretRoutes);
 app.use('/api/short-url', ShortUrlRoutes);
+app.use('/api/words', WordRoutes);
 app.get('/', (_, res) => {
   res.json('OK');
 });
