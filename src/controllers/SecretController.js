@@ -59,6 +59,7 @@ module.exports.createLink = async (id, secret) => {
     const resp = await SecretModel.findOneAndUpdate(updateQuery, updateAction, {
       new: true,
     });
+
     console.log(resp);
     return resp;
   } catch (error) {
