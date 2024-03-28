@@ -47,7 +47,7 @@ app.use('/api/secret', SecretRoutes);
 app.use('/api/short-url', ShortUrlRoutes);
 app.use('/api/words', WordRoutes);
 app.use('/api/phrasal', PhrasalRoutes);
-app.use('/api/useful', PhrasalRoutes);
+app.use('/api/useful', UsefulRoutes);
 
 app.get('/', (_, res) => {
   res.json('OK');
