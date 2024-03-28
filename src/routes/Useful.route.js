@@ -14,6 +14,7 @@ router.post('/saveFirstTime', async (req, res) => {
   }
 });
 router.post('/', async (req, res) => {
+  console.log(req.body);
   try {
     const wordObj = {
       word: req.body.word,
@@ -34,6 +35,7 @@ router.get('/', async (req, res) => {
     console.log(data);
     res.send(data);
   } catch (error) {
+    console.log({ error });
     res.send(error);
   }
 });

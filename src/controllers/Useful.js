@@ -1,4 +1,4 @@
-const usefulModel = require('../models/ShortUrl');
+const usefulModel = require('../models/Useful');
 module.exports.create = async (objWord) => {
   try {
     console.log(objWord);

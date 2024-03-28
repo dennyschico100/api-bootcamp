@@ -5,5 +5,5 @@ const Useful = new Schema({
   spanish: { type: String, default: '' },
 });
 
-const UsefulModel = model('PhrasalVerbModel', Useful);
+const UsefulModel = model('UsefulModel', Useful);
 module.exports = UsefulModel;
