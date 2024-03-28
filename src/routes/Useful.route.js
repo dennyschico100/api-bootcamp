@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const data = await PhrasalController.buscar();
+    const data = await UseFulController.buscar();
     console.log(data);
     res.send(data);
   } catch (error) {
